@@ -1,0 +1,113 @@
+{
+    "objects": [
+        {
+            "type": 0,
+            "pos": {
+                "x": -5,
+                "y": -5
+            },
+            "col": 0,
+            "orientation": 1
+        },
+        {
+            "type": 0,
+            "pos": {
+                "x": -5,
+                "y": -4
+            },
+            "col": 1,
+            "orientation": 0
+        },
+        {
+            "type": 0,
+            "pos": {
+                "x": -5,
+                "y": -3
+            },
+            "col": 2,
+            "orientation": 0
+        },
+        {
+            "type": 0,
+            "pos": {
+                "x": -5,
+                "y": -2
+            },
+            "col": 3,
+            "orientation": 0
+        },
+        {
+            "type": 0,
+            "pos": {
+                "x": -5,
+                "y": -1
+            },
+            "col": 4,
+            "orientation": 0
+        },
+        {
+            "type": 0,
+            "pos": {
+                "x": -5,
+                "y": 0
+            },
+            "col": 5,
+            "orientation": 0
+        },
+        {
+            "type": 1,
+            "pos": {
+                "x": 4,
+                "y": -5
+            },
+            "col": 0,
+            "orientation": 1
+        },
+        {
+            "type": 1,
+            "pos": {
+                "x": 4,
+                "y": -4
+            },
+            "col": 1,
+            "orientation": 1
+        },
+        {
+            "type": 1,
+            "pos": {
+                "x": 4,
+                "y": -3
+            },
+            "col": 2,
+            "orientation": 1
+        },
+        {
+            "type": 1,
+            "pos": {
+                "x": 4,
+                "y": -2
+            },
+            "col": 3,
+            "orientation": 1
+        },
+        {
+            "type": 1,
+            "pos": {
+                "x": 4,
+                "y": -1
+            },
+            "col": 4,
+            "orientation": 1
+        },
+        {
+            "type": 1,
+            "pos": {
+                "x": 4,
+                "y": 0
+            },
+            "col": 5,
+            "orientation": 1
+        }
+    ],
+    "size": 10
+}
