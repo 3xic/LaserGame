@@ -57,8 +57,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 0.7, y: 0.67, z: 0.76}
+  m_Center: {x: 0, y: 0.72, z: 0}
 --- !u!114 &7456826866668126858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,8 +87,9 @@ MonoBehaviour:
   selected: 0
   handler: {fileID: 7456826866668126858}
   color: 0
-  meshRenderers:
-  - {fileID: 7793002561453086827}
+  groups:
+  - meshRenderers:
+    - {fileID: 7793002561453086827}
 --- !u!114 &1145151502259262886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,6 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawners:
   - {fileID: 5978916787708166056}
+  active: 0
 --- !u!1 &3192927834636995060
 GameObject:
   m_ObjectHideFlags: 0

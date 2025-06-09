@@ -11,10 +11,7 @@ public class SelectionHandler : MonoBehaviour
     public MovementHandler handler;
     
     //list of selectable objects, should only be objects that can be rotated and moved
-    private PuzzleObjectType[] selectableObjects = { PuzzleObjectType.REFLECTOR, PuzzleObjectType.SPLITTER, PuzzleObjectType.MERGER, PuzzleObjectType.EMITTER, PuzzleObjectType.RECIEVER };
-
-    //list of rotatable objects
-    private PuzzleObjectType[] rotatableObjects = { PuzzleObjectType.REFLECTOR, PuzzleObjectType.EMITTER, PuzzleObjectType.RECIEVER };
+    private PuzzleObjectType[] selectableObjects = { PuzzleObjectType.REFLECTOR, PuzzleObjectType.SPLITTER, PuzzleObjectType.MERGER, PuzzleObjectType.EMITTER};
 
     private bool inSelectionMode = true;
 
@@ -43,7 +40,7 @@ public class SelectionHandler : MonoBehaviour
         if (inSelectionMode) {
             handler.MoveObject();
         }
-        else if (!inSelectionMode && selectableObjects.Contains(selectedObj.GetComponent<PuzzleObject>().GetPObjType())) {
+        else if (!inSelectionMode && selectedObj.GetComponent<PuzzleObject>().GetPObjType() == PuzzleObjectType.EMITTER) {
             return;
         }
         else {

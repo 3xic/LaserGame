@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using UnityEngine;
 
 public class PuzzleObject : MonoBehaviour
@@ -12,7 +13,7 @@ public class PuzzleObject : MonoBehaviour
 
     public MovementHandler handler;
 
-    void Update()
+    void LateUpdate()
     {
         if (selected)
         {
@@ -30,14 +31,14 @@ public class PuzzleObject : MonoBehaviour
                 return;
 
             case PuzzleObjectType.RECIEVER:
-                handler.RotateObject();
                 return;
 
             case PuzzleObjectType.EMITTER:
-                if (!IsLaserActive())
-                {
-                    handler.RotateObject();
-                }
+                //if (!IsLaserActive())
+                //{
+                //handler.RotateObject();
+                //}
+                handler.RotateObject();
                 return;
 
             case PuzzleObjectType.TRIGGER:
@@ -45,14 +46,20 @@ public class PuzzleObject : MonoBehaviour
 
             case PuzzleObjectType.REFLECTOR:
                 handler.MoveObjectWithCollision();
+                handler.RotateObject();
+                handler.FlipObject();
                 return;
 
             case PuzzleObjectType.SPLITTER:
                 handler.MoveObjectWithCollision();
+                handler.RotateObject();
+                handler.FlipObject();
                 return;
 
             case PuzzleObjectType.MERGER:
                 handler.MoveObjectWithCollision();
+                handler.RotateObject();
+                handler.FlipObject();
                 return;
         }
     }
@@ -71,7 +78,8 @@ public class PuzzleObject : MonoBehaviour
                     return;
 
                 case PuzzleObjectType.EMITTER:
-                    GetComponent<LaserSpawningObject>().UpdateLasers();
+                    GetComponent<LaserSpawningObject>().active = !GetComponent<LaserSpawningObject>().active;
+                    //GetComponent<LaserSpawningObject>().UpdateLasers(new ObjectColor[] {GetComponent<ColoredPuzzleObject>().color});
                     return;
 
                 case PuzzleObjectType.TRIGGER:

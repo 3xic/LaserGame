@@ -476,11 +476,11 @@ MonoBehaviour:
   objects:
   - {fileID: 2165898760119696472, guid: a4b4ef542fcb2054fb4612896ccaac52, type: 3}
   - {fileID: 8725377278270333209, guid: 34ce6d385d4429246907076be0f753bb, type: 3}
-  - {fileID: 1384386017397243091, guid: fddf120c71af8064f9fccdceb5ac83e2, type: 3}
-  - {fileID: 3377960388794844677, guid: 49ae4a7124754494391a4c6b37d00a61, type: 3}
-  - {fileID: 8763140862262964539, guid: 64bc45a127ea16a449bba0632d70f404, type: 3}
-  - {fileID: 4352388483786352445, guid: 6277b266292b1c74e89c6abf7801e34f, type: 3}
-  - {fileID: 856700648618516651, guid: 7fd458e65323bce448007f4902b2a95d, type: 3}
+  - {fileID: 1517610671082467367, guid: fddf120c71af8064f9fccdceb5ac83e2, type: 3}
+  - {fileID: 3265083646684899307, guid: 49ae4a7124754494391a4c6b37d00a61, type: 3}
+  - {fileID: 4694474008790267292, guid: 64bc45a127ea16a449bba0632d70f404, type: 3}
+  - {fileID: 6141311805365717556, guid: 6277b266292b1c74e89c6abf7801e34f, type: 3}
+  - {fileID: 8267279258711952745, guid: 7fd458e65323bce448007f4902b2a95d, type: 3}
 --- !u!114 &840905186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -495,53 +495,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - type: 0
-    pos: {x: -5, y: -5}
-    col: 0
-    orientation: 1
-  - type: 0
-    pos: {x: -5, y: -4}
-    col: 1
-    orientation: 0
-  - type: 0
     pos: {x: -5, y: -3}
+    col: 0
+    orientation: 0
+  - type: 2
+    pos: {x: 0, y: -3}
+    col: 6
+    orientation: 1
+  - type: 2
+    pos: {x: 0, y: -5}
+    col: 6
+    orientation: 2
+  - type: 2
+    pos: {x: 0, y: -4}
+    col: 6
+    orientation: 2
+  - type: 3
+    pos: {x: 0, y: -2}
+    col: 6
+    orientation: 2
+  - type: 2
+    pos: {x: 0, y: -1}
+    col: 6
+    orientation: 2
+  - type: 0
+    pos: {x: -5, y: 0}
     col: 2
     orientation: 0
   - type: 0
-    pos: {x: -5, y: -2}
-    col: 3
+    pos: {x: -5, y: 2}
+    col: 4
     orientation: 0
   - type: 0
     pos: {x: -5, y: -1}
-    col: 4
+    col: 3
     orientation: 0
   - type: 0
-    pos: {x: -5, y: 0}
+    pos: {x: -5, y: -2}
+    col: 1
+    orientation: 0
+  - type: 0
+    pos: {x: -5, y: 1}
     col: 5
     orientation: 0
-  - type: 1
-    pos: {x: 4, y: -5}
-    col: 0
-    orientation: 1
-  - type: 1
-    pos: {x: 4, y: -4}
-    col: 1
-    orientation: 1
-  - type: 1
-    pos: {x: 4, y: -3}
-    col: 2
-    orientation: 1
-  - type: 1
-    pos: {x: 4, y: -2}
-    col: 3
-    orientation: 1
-  - type: 1
-    pos: {x: 4, y: -1}
-    col: 4
-    orientation: 1
-  - type: 1
-    pos: {x: 4, y: 0}
-    col: 5
-    orientation: 1
   size: 10
 --- !u!1 &1025354862
 GameObject:

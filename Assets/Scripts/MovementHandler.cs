@@ -37,6 +37,15 @@ public class MovementHandler : MonoBehaviour
         }
     }
 
+    public void FlipObject()
+    {
+        GameObject obj = transform.Find("FlipPoint").gameObject;
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            obj.transform.Rotate(180, 0, 0, Space.Self);
+        }
+    }
+
     public void MoveObjectWithCollision()
     {
         Ray ray;

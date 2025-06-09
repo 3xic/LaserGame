@@ -48,30 +48,55 @@ public class PuzzleGenerator : MonoBehaviour
         }
     }
 
+    //fix color bs
     void CreateGameObject(PuzzleObjectCreationData p) {
-        switch(p.type) {
+        GameObject obj;
+        switch (p.type) {
             case PuzzleObjectType.EMITTER:
-                GameObject obj = Instantiate(objects[0], new Vector3(p.pos.x, .5f, p.pos.y), Quaternion.Euler(0, p.getRot(), 0));
-                obj.GetComponent<ColoredPuzzleObject>().setColor(p.col);
-                obj.GetComponent<LaserSpawningObject>().spawners[0].color = p.col;
+                obj = Instantiate(objects[0], new Vector3(p.pos.x, .5f, p.pos.y), Quaternion.Euler(0, p.getRot(), 0));
+                foreach (var group in obj.GetComponent<ColoredPuzzleObject>().groups)
+                {
+                    obj.GetComponent<ColoredPuzzleObject>().setColor(p.col, group);
+                }
+                obj.GetComponent<LaserSpawningObject>().spawners[0].SetLaserColor(p.col);
                 return;
             case PuzzleObjectType.RECIEVER:
-                Instantiate(objects[1], new Vector3(p.pos.x, .5f, p.pos.y), Quaternion.Euler(0, p.getRot(), 0)).GetComponent<ColoredPuzzleObject>().setColor(p.col);
+                obj = Instantiate(objects[1], new Vector3(p.pos.x, .5f, p.pos.y), Quaternion.Euler(0, p.getRot(), 0));
+                foreach (var group in obj.GetComponent<ColoredPuzzleObject>().groups)
+                {
+                    obj.GetComponent<ColoredPuzzleObject>().setColor(p.col, group);
+                }
                 return;
             case PuzzleObjectType.REFLECTOR:
-                Instantiate(objects[2], new Vector3(p.pos.x, 1, p.pos.y), Quaternion.Euler(0, p.getRot(), 0)).GetComponent<PuzzleObject>();
+                obj = Instantiate(objects[2], new Vector3(p.pos.x, .5f, p.pos.y), Quaternion.Euler(0, p.getRot(), 0));
+                foreach (var group in obj.GetComponent<ColoredPuzzleObject>().groups)
+                {
+                    obj.GetComponent<ColoredPuzzleObject>().setColor(p.col, group);
+                }
                 return;
             case PuzzleObjectType.SPLITTER:
-                Instantiate(objects[3], new Vector3(p.pos.x, 1, p.pos.y), Quaternion.Euler(0, p.getRot(), 0)).GetComponent<PuzzleObject>();
+                obj = Instantiate(objects[3], new Vector3(p.pos.x, .5f, p.pos.y), Quaternion.Euler(0, p.getRot(), 0));
+                foreach (var group in obj.GetComponent<ColoredPuzzleObject>().groups)
+                {
+                    obj.GetComponent<ColoredPuzzleObject>().setColor(p.col, group);
+                }
                 return;
             case PuzzleObjectType.MERGER:
-                Instantiate(objects[4], new Vector3(p.pos.x, 1, p.pos.y), Quaternion.Euler(0, p.getRot(), 0)).GetComponent<PuzzleObject>();
+                obj = Instantiate(objects[4], new Vector3(p.pos.x, .5f, p.pos.y), Quaternion.Euler(0, p.getRot(), 0));
+                foreach (var group in obj.GetComponent<ColoredPuzzleObject>().groups)
+                {
+                    obj.GetComponent<ColoredPuzzleObject>().setColor(p.col, group);
+                }
                 return;
             case PuzzleObjectType.TRIGGER:
-                Instantiate(objects[5], new Vector3(p.pos.x, 1, p.pos.y), Quaternion.Euler(0, p.getRot(), 0)).GetComponent<ColoredPuzzleObject>().setColor(p.col);
+                obj = Instantiate(objects[5], new Vector3(p.pos.x, .5f, p.pos.y), Quaternion.Euler(0, p.getRot(), 0));
+                foreach (var group in obj.GetComponent<ColoredPuzzleObject>().groups)
+                {
+                    obj.GetComponent<ColoredPuzzleObject>().setColor(p.col, group);
+                }
                 return;
             case PuzzleObjectType.STOPPER:
-                Instantiate(objects[6], new Vector3(p.pos.x, 1, p.pos.y), Quaternion.Euler(0, p.getRot(), 0)).GetComponent<PuzzleObject>();
+                Instantiate(objects[6], new Vector3(p.pos.x, 1, p.pos.y), Quaternion.identity).GetComponent<PuzzleObject>();
                 return;
         }
     
